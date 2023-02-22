@@ -27,11 +27,9 @@ def is_palindrome(sen):
     if set_strict_mode() == False:
         sentence =clean(sentence)
     front = Deque()
-    back = Deque()
     for letter in sentence:
         front.add_front(letter)
-        back.add_rear(letter)
-    if front.to_string() == back.to_string():
+    if front.to_string() == sentence:
         return True
     else:
         return False
